@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 	"sync"
 
@@ -27,4 +28,5 @@ func main() {
 	if err := a.Wait(); err != nil {
 		panic(err)
 	}
+	fmt.Println(strings.Join(newslice, ", "))
 }
