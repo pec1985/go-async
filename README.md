@@ -2,6 +2,16 @@
 
 Run concurrent operations simply. You'll just need to provide a concurrency value.
 ```
+package main
+
+import (
+	"strings"
+	"sync"
+
+	"github.com/pec1985/go-async"
+)
+
+func main() {
 	a := async.New(10)
 	words := "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum metus id interdum dapibus. Phasellus imperdiet ac tellus et porttitor"
 	slice := strings.Split(words, " ")
@@ -21,4 +31,5 @@ Run concurrent operations simply. You'll just need to provide a concurrency valu
 	if err := a.Wait(); err != nil {
 		panic(err)
 	}
+}
 ```
