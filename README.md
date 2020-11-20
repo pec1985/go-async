@@ -33,3 +33,6 @@ func main() {
 	}
 }
 ```
+
+Pedro Enrique  
+MIT License  
